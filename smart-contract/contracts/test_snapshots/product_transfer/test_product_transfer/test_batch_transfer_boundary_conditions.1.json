@@ -1,0 +1,1940 @@
+{
+  "generators": {
+    "address": 6,
+    "nonce": 0
+  },
+  "auth": [
+    [],
+    [],
+    [],
+    [
+      [
+        "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM",
+        {
+          "function": {
+            "contract_fn": {
+              "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+              "function_name": "batch_transfer_products",
+              "args": [
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                }
+              ]
+            }
+          },
+          "sub_invocations": []
+        }
+      ],
+      [
+        "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+        {
+          "function": {
+            "contract_fn": {
+              "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+              "function_name": "batch_transfer_products",
+              "args": [
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                }
+              ]
+            }
+          },
+          "sub_invocations": []
+        }
+      ]
+    ]
+  ],
+  "ledger": {
+    "protocol_version": 20,
+    "sequence_number": 0,
+    "timestamp": 0,
+    "network_id": "0000000000000000000000000000000000000000000000000000000000000000",
+    "base_reserve": 0,
+    "min_persistent_entry_ttl": 4096,
+    "min_temp_entry_ttl": 16,
+    "max_entry_ttl": 6312000,
+    "ledger_entries": [
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
+            "key": "ledger_key_contract_instance",
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
+                "key": "ledger_key_contract_instance",
+                "durability": "persistent",
+                "val": {
+                  "contract_instance": {
+                    "executable": {
+                      "wasm": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    },
+                    "storage": null
+                  }
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": "ledger_key_contract_instance",
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": "ledger_key_contract_instance",
+                "durability": "persistent",
+                "val": {
+                  "contract_instance": {
+                    "executable": {
+                      "wasm": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    },
+                    "storage": null
+                  }
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "AuthContract"
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "AuthContract"
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM"
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "MainContract"
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "MainContract"
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": "ledger_key_contract_instance",
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": "ledger_key_contract_instance",
+                "durability": "persistent",
+                "val": {
+                  "contract_instance": {
+                    "executable": {
+                      "wasm": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                    },
+                    "storage": null
+                  }
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM",
+            "key": {
+              "ledger_key_nonce": {
+                "nonce": 2032731177588607455
+              }
+            },
+            "durability": "temporary"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM",
+                "key": {
+                  "ledger_key_nonce": {
+                    "nonce": 2032731177588607455
+                  }
+                },
+                "durability": "temporary",
+                "val": "void"
+              }
+            },
+            "ext": "v0"
+          },
+          15
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+            "key": {
+              "ledger_key_nonce": {
+                "nonce": 4270020994084947596
+              }
+            },
+            "durability": "temporary"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4",
+                "key": {
+                  "ledger_key_nonce": {
+                    "nonce": 4270020994084947596
+                  }
+                },
+                "durability": "temporary",
+                "val": "void"
+              }
+            },
+            "ext": "v0"
+          },
+          15
+        ]
+      ],
+      [
+        {
+          "contract_code": {
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_code": {
+                "ext": "v0",
+                "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "code": ""
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ]
+    ]
+  },
+  "events": [
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000003"
+              },
+              {
+                "symbol": "pt_init"
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "pt_init"
+              }
+            ],
+            "data": "void"
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000003"
+              },
+              {
+                "symbol": "batch_transfer_products"
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                },
+                {
+                  "vec": []
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "batch_transfer_products"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 30
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 30
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 30
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "batch_transfer_products"
+                },
+                {
+                  "vec": [
+                    {
+                      "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                    },
+                    {
+                      "vec": []
+                    },
+                    {
+                      "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000003"
+              },
+              {
+                "symbol": "batch_transfer_products"
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "batch_transfer_products"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 30
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 30
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 30
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "batch_transfer_products"
+                },
+                {
+                  "vec": [
+                    {
+                      "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        },
+                        {
+                          "string": "PROD"
+                        }
+                      ]
+                    },
+                    {
+                      "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000003"
+              },
+              {
+                "symbol": "batch_transfer_products"
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK3IM"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    },
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                },
+                {
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000002"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "string": "PROD"
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 2
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "get_product"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000002"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "string": "PROD"
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 2
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "get_product"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000002"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "string": "PROD"
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 2
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "get_product"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000002"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "string": "PROD"
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 2
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "get_product"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_call"
+              },
+              {
+                "bytes": "0000000000000000000000000000000000000000000000000000000000000002"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "string": "PROD"
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "get_product"
+              }
+            ],
+            "data": {
+              "error": {
+                "contract": 2
+              }
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating Ok(ScErrorType::Contract) frame-exit to Err"
+            }
+          }
+        }
+      },
+      "failed_call": true
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 2
+                }
+              }
+            ],
+            "data": {
+              "vec": [
+                {
+                  "string": "contract try_call failed"
+                },
+                {
+                  "symbol": "get_product"
+                },
+                {
+                  "vec": [
+                    {
+                      "string": "PROD"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "fn_return"
+              },
+              {
+                "symbol": "batch_transfer_products"
+              }
+            ],
+            "data": {
+              "u32": 0
+            }
+          }
+        }
+      },
+      "failed_call": false
+    }
+  ]
+}
