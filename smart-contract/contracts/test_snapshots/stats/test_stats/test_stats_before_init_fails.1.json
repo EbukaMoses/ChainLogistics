@@ -87,7 +87,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "get_stats"
+                "symbol": "stats_get_stats"
               }
             ],
             "data": "void"
@@ -108,7 +108,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_stats"
+                "symbol": "stats_get_stats"
               }
             ],
             "data": {
@@ -169,7 +169,7 @@
                   "string": "contract try_call failed"
                 },
                 {
-                  "symbol": "get_stats"
+                  "symbol": "stats_get_stats"
                 },
                 {
                   "vec": []

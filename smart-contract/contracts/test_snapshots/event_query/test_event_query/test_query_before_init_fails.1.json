@@ -87,7 +87,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "get_event_count"
+                "symbol": "query_get_event_count"
               }
             ],
             "data": {
@@ -110,7 +110,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_event_count"
+                "symbol": "query_get_event_count"
               }
             ],
             "data": {
@@ -171,7 +171,7 @@
                   "string": "contract try_call failed"
                 },
                 {
-                  "symbol": "get_event_count"
+                  "symbol": "query_get_event_count"
                 },
                 {
                   "vec": [

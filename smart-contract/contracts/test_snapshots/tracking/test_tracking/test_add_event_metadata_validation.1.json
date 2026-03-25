@@ -699,6 +699,195 @@
         {
           "contract_data": {
             "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Category"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Category"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "PROD1"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Origin"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Origin"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "PROD1"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Test Product"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Test Product"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "PROD1"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
             "key": "ledger_key_contract_instance",
             "durability": "persistent"
           }
@@ -1560,7 +1749,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -1853,7 +2042,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -1914,7 +2103,7 @@
                   "string": "contract try_call failed"
                 },
                 {
-                  "symbol": "add_tracking_event"
+                  "symbol": "tracking_add_event"
                 },
                 {
                   "vec": [

@@ -131,7 +131,7 @@
           "function": {
             "contract_fn": {
               "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
-              "function_name": "add_tracking_event",
+              "function_name": "tracking_add_event",
               "args": [
                 {
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
@@ -168,7 +168,7 @@
           "function": {
             "contract_fn": {
               "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
-              "function_name": "add_tracking_event",
+              "function_name": "tracking_add_event",
               "args": [
                 {
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
@@ -205,7 +205,7 @@
           "function": {
             "contract_fn": {
               "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
-              "function_name": "add_tracking_event",
+              "function_name": "tracking_add_event",
               "args": [
                 {
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
@@ -811,6 +811,195 @@
         {
           "contract_data": {
             "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Category"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Category"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "PROD1"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Origin"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Origin"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "PROD1"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Test Product"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Test Product"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "PROD1"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
             "key": "ledger_key_contract_instance",
             "durability": "persistent"
           }
@@ -1375,7 +1564,7 @@
                   "symbol": "created"
                 },
                 {
-                  "u64": 1
+                  "u64": 0
                 }
               ]
             },
@@ -1401,13 +1590,70 @@
                       "symbol": "created"
                     },
                     {
-                      "u64": 1
+                      "u64": 0
                     }
                   ]
                 },
                 "durability": "persistent",
                 "val": {
                   "u64": 1
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "EventTypeIndex"
+                },
+                {
+                  "string": "PROD1"
+                },
+                {
+                  "symbol": "shipped"
+                },
+                {
+                  "u64": 0
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "EventTypeIndex"
+                    },
+                    {
+                      "string": "PROD1"
+                    },
+                    {
+                      "symbol": "shipped"
+                    },
+                    {
+                      "u64": 0
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "u64": 2
                 }
               }
             },
@@ -1459,63 +1705,6 @@
                     },
                     {
                       "u64": 1
-                    }
-                  ]
-                },
-                "durability": "persistent",
-                "val": {
-                  "u64": 2
-                }
-              }
-            },
-            "ext": "v0"
-          },
-          4095
-        ]
-      ],
-      [
-        {
-          "contract_data": {
-            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
-            "key": {
-              "vec": [
-                {
-                  "symbol": "EventTypeIndex"
-                },
-                {
-                  "string": "PROD1"
-                },
-                {
-                  "symbol": "shipped"
-                },
-                {
-                  "u64": 2
-                }
-              ]
-            },
-            "durability": "persistent"
-          }
-        },
-        [
-          {
-            "last_modified_ledger_seq": 0,
-            "data": {
-              "contract_data": {
-                "ext": "v0",
-                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4",
-                "key": {
-                  "vec": [
-                    {
-                      "symbol": "EventTypeIndex"
-                    },
-                    {
-                      "string": "PROD1"
-                    },
-                    {
-                      "symbol": "shipped"
-                    },
-                    {
-                      "u64": 2
                     }
                   ]
                 },
@@ -2492,7 +2681,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -2683,7 +2872,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -2709,7 +2898,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -2900,7 +3089,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -2926,7 +3115,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -3117,7 +3306,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -3143,7 +3332,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "get_event_count_by_type"
+                "symbol": "tracking_get_event_count_by_type"
               }
             ],
             "data": {
@@ -3173,7 +3362,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_event_count_by_type"
+                "symbol": "tracking_get_event_count_by_type"
               }
             ],
             "data": {
@@ -3199,7 +3388,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "get_event_count_by_type"
+                "symbol": "tracking_get_event_count_by_type"
               }
             ],
             "data": {
@@ -3229,7 +3418,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_event_count_by_type"
+                "symbol": "tracking_get_event_count_by_type"
               }
             ],
             "data": {

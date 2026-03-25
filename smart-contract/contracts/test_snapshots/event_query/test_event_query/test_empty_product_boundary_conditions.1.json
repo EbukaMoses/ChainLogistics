@@ -703,6 +703,195 @@
         {
           "contract_data": {
             "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Category"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Category"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "EMPTY_PROD"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Origin"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Origin"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "EMPTY_PROD"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Test Product"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Test Product"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": [
+                    {
+                      "string": "EMPTY_PROD"
+                    }
+                  ]
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M",
             "key": "ledger_key_contract_instance",
             "durability": "persistent"
           }
@@ -1728,7 +1917,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000005"
               },
               {
-                "symbol": "get_product_events"
+                "symbol": "query_get_product_events"
               }
             ],
             "data": {
@@ -1927,7 +2116,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -1950,7 +2139,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -1973,7 +2162,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_product_events"
+                "symbol": "query_get_product_events"
               }
             ],
             "data": {
@@ -2024,7 +2213,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000005"
               },
               {
-                "symbol": "get_product_events"
+                "symbol": "query_get_product_events"
               }
             ],
             "data": {
@@ -2223,7 +2412,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -2246,7 +2435,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -2269,7 +2458,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_product_events"
+                "symbol": "query_get_product_events"
               }
             ],
             "data": {
@@ -2320,7 +2509,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000005"
               },
               {
-                "symbol": "get_events_by_type"
+                "symbol": "query_get_events_by_type"
               }
             ],
             "data": {
@@ -2522,7 +2711,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -2545,7 +2734,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -2568,7 +2757,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_events_by_type"
+                "symbol": "query_get_events_by_type"
               }
             ],
             "data": {
@@ -2619,7 +2808,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000005"
               },
               {
-                "symbol": "get_filtered_events"
+                "symbol": "query_get_filtered_events"
               }
             ],
             "data": {
@@ -2854,7 +3043,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000004"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -2877,7 +3066,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_product_event_ids"
+                "symbol": "tracking_get_product_event_ids"
               }
             ],
             "data": {
@@ -2900,7 +3089,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_filtered_events"
+                "symbol": "query_get_filtered_events"
               }
             ],
             "data": {

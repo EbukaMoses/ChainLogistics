@@ -584,6 +584,183 @@
         {
           "contract_data": {
             "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Category"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Category"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": []
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Origin"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Origin"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": []
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": {
+              "vec": [
+                {
+                  "symbol": "SearchIndex"
+                },
+                {
+                  "vec": [
+                    {
+                      "symbol": "Keyword"
+                    },
+                    {
+                      "string": "Test Product"
+                    }
+                  ]
+                }
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 0,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": {
+                  "vec": [
+                    {
+                      "symbol": "SearchIndex"
+                    },
+                    {
+                      "vec": [
+                        {
+                          "symbol": "Keyword"
+                        },
+                        {
+                          "string": "Test Product"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "vec": []
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ],
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
             "key": "ledger_key_contract_instance",
             "durability": "persistent"
           }
@@ -1744,7 +1921,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000003"
               },
               {
-                "symbol": "get_event_count"
+                "symbol": "tracking_get_event_count"
               }
             ],
             "data": {
@@ -1767,7 +1944,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_event_count"
+                "symbol": "tracking_get_event_count"
               }
             ],
             "data": {
@@ -2128,7 +2305,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000003"
               },
               {
-                "symbol": "get_event_count"
+                "symbol": "tracking_get_event_count"
               }
             ],
             "data": {
@@ -2151,7 +2328,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "get_event_count"
+                "symbol": "tracking_get_event_count"
               }
             ],
             "data": {

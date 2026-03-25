@@ -87,7 +87,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -132,7 +132,7 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "add_tracking_event"
+                "symbol": "tracking_add_event"
               }
             ],
             "data": {
@@ -193,7 +193,7 @@
                   "string": "contract try_call failed"
                 },
                 {
-                  "symbol": "add_tracking_event"
+                  "symbol": "tracking_add_event"
                 },
                 {
                   "vec": [
