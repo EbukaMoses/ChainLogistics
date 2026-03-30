@@ -1,2 +1,0 @@
-axum::middleware::FromFn<fn(axum::extract::State<AppState>, axum::http::Request<Body>, Next) -> impl std::future::Future<Output = Result<axum::http::Response<Body>, AppError>> {api_key_auth}, (), Route, _>
-axum::middleware::FromFn<fn(axum::extract::State<AppState>, axum::http::Request<Body>, Next) -> impl std::future::Future<Output = Result<axum::http::Response<Body>, AppError>> {api_key_auth}, (), Route, _>: Service<axum::http::Request<Body>>
