@@ -3,10 +3,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { FormStepIndicator } from "./FormStepIndicator";
 import { useWalletStore } from "@/lib/state/wallet.store";
 import { registerProductOnChain } from "@/lib/contract/product";
-import { Loader2, ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Loader2, ArrowRight, ArrowLeft, CheckCircle2, AlertCircle } from "lucide-react";
 
 import {
     productRegistrationSchema,
@@ -22,9 +23,11 @@ const STEPS = [
 ];
 
 export function ProductRegistrationForm() {
+    const router = useRouter();
     const [step, setStep] = useState(1);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [txHash, setTxHash] = useState<string | null>(null);
+    const [submitError, setSubmitError] = useState<string | null>(null);
 
     const { publicKey, status: walletStatus } = useWalletStore();
 
@@ -54,24 +57,29 @@ export function ProductRegistrationForm() {
 
     const onSubmit = async (data: ProductRegistrationValues) => {
         if (walletStatus !== "connected" || !publicKey) {
-            alert("Please connect your wallet first");
+            setSubmitError("Please connect your wallet first.");
             return;
         }
 
         if (!apiRateLimiter.check("registerProduct")) {
-            alert("Too many requests. Please wait before trying again.");
+            setSubmitError("Too many requests. Please wait before trying again.");
             return;
         }
 
         const sanitizedData = sanitizeFormData(data);
 
         setIsSubmitting(true);
+        setSubmitError(null);
         try {
             const hash = await registerProductOnChain(publicKey, sanitizedData);
             setTxHash(hash);
             setStep(4); // Success step
-        } catch {
-            alert("Failed to register product");
+        } catch (err) {
+            setSubmitError(
+                err instanceof Error
+                    ? err.message
+                    : "Failed to register product. Please try again."
+            );
         } finally {
             setIsSubmitting(false);
         }
@@ -89,7 +97,7 @@ export function ProductRegistrationForm() {
                     <p className="text-xs font-mono text-zinc-500 break-all">Transaction Hash: {txHash}</p>
                 </div>
                 <button
-                    onClick={() => window.location.href = "/dashboard"}
+                    onClick={() => router.push("/dashboard")}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all"
                 >
                     View Dashboard
@@ -207,6 +215,13 @@ export function ProductRegistrationForm() {
                         {walletStatus !== "connected" && (
                             <div role="alert" className="bg-orange-50 border border-orange-200 rounded-lg p-4 text-sm text-orange-800">
                                 Please connect your wallet to submit this registration.
+                            </div>
+                        )}
+
+                        {submitError && (
+                            <div role="alert" className="flex items-start gap-3 bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-800">
+                                <AlertCircle className="h-4 w-4 mt-0.5 shrink-0" aria-hidden="true" />
+                                <span>{submitError}</span>
                             </div>
                         )}
                     </div>

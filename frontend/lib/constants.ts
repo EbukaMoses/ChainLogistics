@@ -12,11 +12,8 @@
 /** Duration a "copied" tooltip stays visible after clipboard copy. */
 export const COPY_FEEDBACK_DURATION_MS = 2000;
 
-/** Simulated delay for product registration placeholder. */
-export const PRODUCT_REGISTRATION_DELAY_MS = 2000;
-
-/** Simulated delay for event tracking form submission placeholder. */
-export const EVENT_TRACKING_SUBMIT_DELAY_MS = 1500;
+/** Polling interval when waiting for a submitted Soroban transaction to be confirmed (ms). */
+export const TRANSACTION_POLL_INTERVAL_MS = 1500;
 
 // ---------------------------------------------------------------------------
 // Dashboard
