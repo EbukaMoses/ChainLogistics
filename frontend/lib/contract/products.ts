@@ -17,8 +17,11 @@ import { Address, xdr } from "@stellar/stellar-sdk";
 export async function getProductsByOwner(owner: string): Promise<Product[]> {
   const startedAt = Date.now();
 
+  const useMockData = process.env.NEXT_PUBLIC_USE_MOCK_DATA === "true";
+
+  // When no contract is configured, return mock data only when explicitly enabled.
   if (!CONTRACT_CONFIG.CONTRACT_ID) {
-    if (process.env.NODE_ENV === "development") {
+    if (useMockData) {
       return getMockProducts(owner);
     }
     return [];
