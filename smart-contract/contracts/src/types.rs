@@ -125,6 +125,118 @@ pub struct ProductStats {
     pub active_products: u64,
 }
 
+/// Circuit breaker state for emergency controls.
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct CircuitBreakerState {
+    /// Whether the circuit breaker is currently paused
+    pub is_paused: bool,
+    /// Current pause level
+    pub level: PauseLevel,
+    /// Current record ID
+    pub current_record_id: u64,
+    /// When the pause was initiated
+    pub paused_at: u64,
+    /// When the pause expires
+    pub expires_at: u64,
+}
+
+/// Pause approval for circuit breaker operations.
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct PauseApproval {
+    /// Unique approval identifier
+    pub approval_id: u64,
+    /// Who requested the pause
+    pub proposer: Address,
+    /// Pause level
+    pub level: PauseLevel,
+    /// Reason for pause
+    pub reason: PauseReason,
+    /// Duration in seconds
+    pub duration: u64,
+    /// When this approval was created
+    pub created_at: u64,
+    /// When this approval expires
+    pub expires_at: u64,
+    /// List of guardians who have approved
+    pub approvals: Vec<Address>,
+    /// Number of approvals required
+    pub required_approvals: u32,
+    /// Whether this approval has been executed
+    pub executed: bool,
+    /// Description of the pause
+    pub description: String,
+    /// Proposed level (alias for level)
+    pub proposed_level: PauseLevel,
+    /// Proposed reason (alias for reason)
+    pub proposed_reason: PauseReason,
+}
+
+/// Pause level for circuit breaker operations.
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum PauseLevel {
+    /// Advisory - informational only
+    Advisory = 0,
+    /// Partial pause - only critical operations stopped
+    Partial = 1,
+    /// Full pause - all operations stopped
+    Full = 2,
+    /// Emergency pause - immediate halt
+    Emergency = 3,
+}
+
+/// Pause reason for circuit breaker operations.
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub enum PauseReason {
+    /// Security breach detected
+    SecurityBreach = 0,
+    /// System maintenance
+    Maintenance = 1,
+    /// Regulatory compliance
+    Compliance = 2,
+    /// Technical issues
+    Technical = 3,
+    /// Other custom reason
+    Other = 4,
+    /// Market volatility
+    MarketVolatility = 5,
+    /// Contract bug
+    ContractBug = 6,
+    /// Oracle failure
+    OracleFailure = 7,
+    /// Regulatory action
+    RegulatoryAction = 8,
+}
+
+/// Pause record for circuit breaker history.
+#[contracttype]
+#[derive(Clone, Debug, Eq, PartialEq)]
+pub struct PauseRecord {
+    /// Unique record identifier
+    pub record_id: u64,
+    /// Who initiated the pause
+    pub activated_by: Address,
+    /// Pause level
+    pub level: PauseLevel,
+    /// Pause reason
+    pub reason: PauseReason,
+    /// Detailed description
+    pub description: String,
+    /// When the pause was initiated
+    pub activated_at: u64,
+    /// When the pause is set to expire
+    pub expires_at: u64,
+    /// Whether the pause is currently active
+    pub is_active: bool,
+    /// Who lifted the pause (if applicable)
+    pub lifted_by: Vec<Address>,
+    /// When the pause was lifted (if applicable)
+    pub lifted_at: u64,
+}
+
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub enum DataKey {
@@ -169,6 +281,13 @@ pub enum DataKey {
     TimelockOperation(u64),
     NextTimelockOperationId,
     ReentrancyLock(Symbol),
+    // Circuit breaker related keys
+    CircuitBreakerState,
+    CircuitBreakerGuardians,
+    CircuitBreakerNextRecordId,
+    CircuitBreakerPauseRecord(u64),
+    CircuitBreakerNextApprovalId,
+    CircuitBreakerPendingApproval(u64),
 }
 
 #[contracttype]

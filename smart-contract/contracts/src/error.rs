@@ -94,4 +94,19 @@ pub enum Error {
     CertificationNotFound = 103,
     InvalidCertification = 104,
     ReadingNotFound = 105,
+
+    // --- Circuit Breaker (110-130) ---
+    CircuitBreakerNotInitialized = 110,
+    CircuitBreakerAlreadyInitialized = 111,
+    NotGuardian = 112,
+    TooManyGuardians = 113,
+    DuplicateGuardian = 114,
+    PauseDescriptionTooLong = 115,
+    InvalidPauseDuration = 116,
+    PauseRecordNotFound = 117,
+    ApprovalNotFound = 118,
+    ApprovalAlreadyExecuted = 119,
+    ApprovalExpired = 120,
+    ApprovalAlreadyVoted = 121,
+    ApprovalThresholdNotReached = 122,
 }

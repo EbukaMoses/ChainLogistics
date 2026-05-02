@@ -43,9 +43,69 @@
 /// | `cb_proposal_created`     | Multi-auth proposal created               |
 /// | `cb_proposal_approved`    | Guardian approved a proposal              |
 /// | `cb_proposal_executed`    | Proposal threshold reached, pause applied |
-use soroban_sdk::{contract, contractimpl, Address, Env, String, Symbol, Vec};
+use soroban_sdk::{contract, contractimpl, Address, Env, String, Symbol, Vec, contractevent};
 
 use crate::error::Error;
+
+#[contractevent]
+pub struct InitializedEvent {
+    pub admin: Address,
+    pub guardians: Vec<Address>,
+}
+
+#[contractevent]
+pub struct GuardianAddedEvent {
+    pub guardian: Address,
+}
+
+#[contractevent]
+pub struct GuardianRemovedEvent {
+    pub guardian: Address,
+}
+
+#[contractevent]
+pub struct PausedEvent {
+    pub record_id: u64,
+    pub activated_by: Address,
+    pub level: PauseLevel,
+    pub reason: PauseReason,
+    pub description: String,
+    pub expires_at: u64,
+}
+
+#[contractevent]
+pub struct LiftedEvent {
+    pub record_id: u64,
+    pub lifted_by: Address,
+}
+
+#[contractevent]
+pub struct ExpiredEvent {
+    pub record_id: u64,
+    pub timestamp: u64,
+}
+
+#[contractevent]
+pub struct ProposalCreatedEvent {
+    pub approval_id: u64,
+    pub proposer: Address,
+    pub level: PauseLevel,
+    pub reason: PauseReason,
+    pub required_approvals: u32,
+}
+
+#[contractevent]
+pub struct ProposalApprovedEvent {
+    pub approval_id: u64,
+    pub approver: Address,
+}
+
+#[contractevent]
+pub struct ProposalExecutedEvent {
+    pub approval_id: u64,
+    pub executor: Address,
+    pub record_id: u64,
+}
 use crate::types::{
     CircuitBreakerState, DataKey, PauseApproval, PauseLevel, PauseReason, PauseRecord,
 };
@@ -224,6 +284,7 @@ fn activate_pause(
         description: description.clone(),
         activated_at: now,
         expires_at,
+        is_active: true,
         lifted_at: 0,
         lifted_by: Vec::new(env),
     };
@@ -238,6 +299,7 @@ fn activate_pause(
     };
     set_state(env, &state);
 
+    #[allow(deprecated)]
     env.events().publish(
         (Symbol::new(env, "cb_paused"), record_id),
         (activated_by, level, reason, description, expires_at),
@@ -420,17 +482,22 @@ impl CircuitBreakerContract {
 
         let approval = PauseApproval {
             approval_id,
-            proposed_level: level.clone(),
-            proposed_reason: reason.clone(),
-            description: description.clone(),
-            expires_at,
             proposer: proposer.clone(),
+            level: level.clone(),
+            reason: reason.clone(),
+            duration: pause_duration_secs,
+            created_at: env.ledger().timestamp(),
+            expires_at,
             approvals,
             required_approvals,
             executed: false,
+            description: description.clone(),
+            proposed_level: level.clone(),
+            proposed_reason: reason.clone(),
         };
         put_approval(&env, &approval);
 
+        #[allow(deprecated)]
         env.events().publish(
             (Symbol::new(&env, "cb_proposal_created"), approval_id),
             (proposer, level, reason, required_approvals),
@@ -462,6 +529,7 @@ impl CircuitBreakerContract {
         approval.approvals.push_back(approver.clone());
         put_approval(&env, &approval);
 
+        #[allow(deprecated)]
         env.events().publish(
             (Symbol::new(&env, "cb_proposal_approved"), approval_id),
             approver,
@@ -508,6 +576,7 @@ impl CircuitBreakerContract {
             pause_duration_secs,
         )?;
 
+        #[allow(deprecated)]
         env.events().publish(
             (Symbol::new(&env, "cb_proposal_executed"), approval_id),
             (executor, record_id),
@@ -567,6 +636,7 @@ impl CircuitBreakerContract {
                 record.lifted_at = env.ledger().timestamp();
                 put_record(&env, &record);
             }
+            #[allow(deprecated)]
             env.events().publish(
                 (Symbol::new(&env, "cb_expired"), state.current_record_id),
                 env.ledger().timestamp(),
