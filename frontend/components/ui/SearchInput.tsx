@@ -160,19 +160,19 @@ export function SearchInput<
   React.useEffect(() => {
     // Keep activeIndex in bounds when the filtered list changes.
     if (!open) {
-      setActiveIndex(-1);
+      setTimeout(() => setActiveIndex(-1), 0);
       return;
     }
 
     if (filtered.length === 0) {
-      setActiveIndex(-1);
+      setTimeout(() => setActiveIndex(-1), 0);
       return;
     }
 
-    setActiveIndex((prev) => {
+    setTimeout(() => setActiveIndex((prev) => {
       if (prev < 0) return 0;
       return Math.min(prev, filtered.length - 1);
-    });
+    }), 0);
   }, [filtered.length, open]);
 
   React.useEffect(() => {

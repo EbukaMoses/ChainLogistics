@@ -175,7 +175,7 @@ export default function DashboardPage() {
 
   React.useEffect(() => {
     if (status !== "connected" || !publicKey) return;
-    load();
+    setTimeout(() => load(), 0);
   }, [status, publicKey, load]);
 
   React.useEffect(() => {

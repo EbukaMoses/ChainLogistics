@@ -39,7 +39,7 @@ export default function ProductsPage() {
       next.status = "all";
     }
 
-    setFilters(next);
+    setTimeout(() => setFilters(next), 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -87,7 +87,7 @@ export default function ProductsPage() {
 
   // Fetch products
   useEffect(() => {
-    fetchProducts();
+    setTimeout(() => fetchProducts(), 0);
   }, [fetchProducts]);
 
   // Extract unique categories and owners for filter dropdowns

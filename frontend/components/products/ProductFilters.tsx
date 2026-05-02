@@ -51,7 +51,7 @@ export function ProductFilters({
   }, [localSearch]);
 
   useEffect(() => {
-    setSaved(loadSavedSearches<SavedFilters>(storageKey));
+    setTimeout(() => setSaved(loadSavedSearches<SavedFilters>(storageKey)), 0);
   }, []);
 
   const updateFilter = (key: keyof FilterState, value: string) => {

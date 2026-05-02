@@ -62,7 +62,7 @@ export function Timeline({ productId }: Readonly<TimelineProps>) {
   }, [productId, offset, PAGE_SIZE]);
 
   useEffect(() => {
-    loadEvents();
+    setTimeout(() => loadEvents(), 0);
   }, [loadEvents]);
 
   if (loading) {

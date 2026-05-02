@@ -42,7 +42,7 @@ export default function EventTrackingForm() {
     }, [publicKey]);
 
     useEffect(() => {
-        loadProducts();
+        setTimeout(() => loadProducts(), 0);
     }, [loadProducts]);
 
     const resetForm = () => {
