@@ -160,19 +160,30 @@ export function SearchInput<
   React.useEffect(() => {
     // Keep activeIndex in bounds when the filtered list changes.
     if (!open) {
-      setTimeout(() => setActiveIndex(-1), 0);
-      return;
+      // Use setTimeout to avoid calling setState synchronously in effect
+      const timeoutId = setTimeout(() => {
+        setActiveIndex(-1);
+      }, 0);
+      return () => clearTimeout(timeoutId);
     }
 
     if (filtered.length === 0) {
-      setTimeout(() => setActiveIndex(-1), 0);
-      return;
+      // Use setTimeout to avoid calling setState synchronously in effect
+      const timeoutId = setTimeout(() => {
+        setActiveIndex(-1);
+      }, 0);
+      return () => clearTimeout(timeoutId);
     }
 
-    setTimeout(() => setActiveIndex((prev) => {
-      if (prev < 0) return 0;
-      return Math.min(prev, filtered.length - 1);
-    }), 0);
+    // Use setTimeout to avoid calling setState synchronously in effect
+    const timeoutId = setTimeout(() => {
+      setActiveIndex((prev) => {
+        if (prev < 0) return 0;
+        return Math.min(prev, filtered.length - 1);
+      });
+    }, 0);
+    
+    return () => clearTimeout(timeoutId);
   }, [filtered.length, open]);
 
   React.useEffect(() => {
