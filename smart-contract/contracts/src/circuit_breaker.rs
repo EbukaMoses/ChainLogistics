@@ -518,7 +518,7 @@ impl CircuitBreakerContract {
     ) -> Result<(), Error> {
         require_guardian(&env, &approver)?;
 
-        let approval = get_approval(&env, approval_id).ok_or(Error::ApprovalNotFound)?;
+        let mut approval = get_approval(&env, approval_id).ok_or(Error::ApprovalNotFound)?;
 
         if approval.executed {
             return Err(Error::ApprovalAlreadyExecuted);
@@ -529,6 +529,9 @@ impl CircuitBreakerContract {
         if approval.approvals.contains(&approver) {
             return Err(Error::ApprovalAlreadyVoted);
         }
+
+        approval.approvals.push_back(approver.clone());
+        put_approval(&env, &approval);
 
         #[allow(deprecated)]
         env.events().publish(
@@ -655,14 +658,14 @@ impl CircuitBreakerContract {
 
     /// Returns `true` when the contract is paused at any level above Advisory.
     pub fn is_paused(env: Env) -> bool {
-        let state = get_state(&env);
+        let state = Self::get_state(env);
         state.is_paused
     }
 
     /// Returns `true` when write operations should be blocked
     /// (Partial, Full, or Emergency pause).
     pub fn check_writes_allowed(env: Env) -> bool {
-        let state = get_state(&env);
+        let state = Self::get_state(env);
         if !state.is_paused {
             return true;
         }
@@ -671,7 +674,7 @@ impl CircuitBreakerContract {
 
     /// Returns `true` when all mutations are blocked (Full or Emergency).
     pub fn check_mutations_allowed(env: Env) -> bool {
-        let state = get_state(&env);
+        let state = Self::get_state(env);
         if !state.is_paused {
             return true;
         }
@@ -680,7 +683,7 @@ impl CircuitBreakerContract {
 
     /// Returns `true` when reads are allowed (everything except Emergency).
     pub fn check_reads_allowed(env: Env) -> bool {
-        let state = get_state(&env);
+        let state = Self::get_state(env);
         if !state.is_paused {
             return true;
         }
