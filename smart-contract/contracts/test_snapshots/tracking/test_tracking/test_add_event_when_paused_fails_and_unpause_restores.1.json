@@ -752,6 +752,21 @@
                       "key": {
                         "vec": [
                           {
+                            "symbol": "ReentrancyLock"
+                          },
+                          {
+                            "symbol": "register_product"
+                          }
+                        ]
+                      },
+                      "val": {
+                        "bool": false
+                      }
+                    },
+                    {
+                      "key": {
+                        "vec": [
+                          {
                             "symbol": "TotalProducts"
                           }
                         ]
@@ -1160,31 +1175,90 @@
           "v0": {
             "topics": [
               {
-                "symbol": "tracking_event"
-              },
-              {
-                "string": "PROD1"
-              },
-              {
-                "u64": "1"
+                "symbol": "tracking_event_published"
               }
             ],
             "data": {
               "map": [
                 {
                   "key": {
-                    "symbol": "actor"
+                    "symbol": "event"
                   },
                   "val": {
-                    "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "data_hash"
-                  },
-                  "val": {
-                    "bytes": "0000000000000000000000000000000000000000000000000000000000000000"
+                    "map": [
+                      {
+                        "key": {
+                          "symbol": "actor"
+                        },
+                        "val": {
+                          "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMDR4"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "data_hash"
+                        },
+                        "val": {
+                          "bytes": "0000000000000000000000000000000000000000000000000000000000000000"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "event_id"
+                        },
+                        "val": {
+                          "u64": "1"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "event_type"
+                        },
+                        "val": {
+                          "symbol": "created"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "location"
+                        },
+                        "val": {
+                          "string": "Warehouse A"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "metadata"
+                        },
+                        "val": {
+                          "map": []
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "note"
+                        },
+                        "val": {
+                          "string": "Product created"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "product_id"
+                        },
+                        "val": {
+                          "string": "PROD1"
+                        }
+                      },
+                      {
+                        "key": {
+                          "symbol": "timestamp"
+                        },
+                        "val": {
+                          "u64": "0"
+                        }
+                      }
+                    ]
                   }
                 },
                 {
@@ -1197,50 +1271,10 @@
                 },
                 {
                   "key": {
-                    "symbol": "event_type"
-                  },
-                  "val": {
-                    "symbol": "created"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "location"
-                  },
-                  "val": {
-                    "string": "Warehouse A"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "metadata"
-                  },
-                  "val": {
-                    "map": []
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "note"
-                  },
-                  "val": {
-                    "string": "Product created"
-                  }
-                },
-                {
-                  "key": {
                     "symbol": "product_id"
                   },
                   "val": {
                     "string": "PROD1"
-                  }
-                },
-                {
-                  "key": {
-                    "symbol": "timestamp"
-                  },
-                  "val": {
-                    "u64": "0"
                   }
                 }
               ]
