@@ -94,6 +94,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Linux-specific native modules
+        run: |
+          npm install @rollup/rollup-linux-x64-gnu --save-optional
+          npm install lightningcss-linux-x64-gnu --save-optional
+          npm install @tailwindcss/oxide-linux-x64-gnu --save-optional
+
       - name: Run npm audit
         run: npm audit --audit-level=moderate
 
@@ -144,6 +150,7 @@ jobs:
         run: |
           npm install @rollup/rollup-linux-x64-gnu --save-optional
           npm install lightningcss-linux-x64-gnu --save-optional
+          npm install @tailwindcss/oxide-linux-x64-gnu --save-optional
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
