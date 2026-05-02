@@ -539,10 +539,9 @@ impl CircuitBreakerContract {
         Ok(())
     }
 
-
-// ═══════════════════════════════════════════════════════════════════════
-// MULTI-AUTHORITY PAUSE  (proposal → approvals → execute)
-// ═══════════════════════════════════════════════════════════════════════
+    // ═══════════════════════════════════════════════════════════════════════
+    // MULTI-AUTHORITY PAUSE  (proposal → approvals → execute)
+    // ═══════════════════════════════════════════════════════════════════════
     ///
     /// Any guardian can trigger execution once enough votes are in.
     /// `pause_duration_secs` is the duration for the resulting pause.
