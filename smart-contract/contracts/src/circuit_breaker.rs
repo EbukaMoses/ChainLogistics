@@ -359,6 +359,7 @@ impl CircuitBreakerContract {
             },
         );
 
+        #[allow(deprecated)]
         env.events()
             .publish((Symbol::new(&env, "cb_initialized"),), (admin, guardians));
 
@@ -383,6 +384,7 @@ impl CircuitBreakerContract {
         guardians.push_back(guardian.clone());
         set_guardians(&env, &guardians);
 
+        #[allow(deprecated)]
         env.events()
             .publish((Symbol::new(&env, "cb_guardian_added"),), guardian);
 
@@ -405,6 +407,7 @@ impl CircuitBreakerContract {
         guardians.remove(i);
         set_guardians(&env, &guardians);
 
+        #[allow(deprecated)]
         env.events()
             .publish((Symbol::new(&env, "cb_guardian_removed"),), guardian);
 
@@ -450,6 +453,7 @@ impl CircuitBreakerContract {
     /// The proposer's vote is counted automatically.
     /// `approval_window_secs` is how long the proposal stays open (0 = no
     /// expiry on the proposal itself).
+    #[allow(clippy::too_many_arguments)]
     pub fn propose_pause(
         env: Env,
         proposer: Address,
@@ -514,7 +518,7 @@ impl CircuitBreakerContract {
     ) -> Result<(), Error> {
         require_guardian(&env, &approver)?;
 
-        let mut approval = get_approval(&env, approval_id).ok_or(Error::ApprovalNotFound)?;
+        let approval = get_approval(&env, approval_id).ok_or(Error::ApprovalNotFound)?;
 
         if approval.executed {
             return Err(Error::ApprovalAlreadyExecuted);
@@ -526,9 +530,6 @@ impl CircuitBreakerContract {
             return Err(Error::ApprovalAlreadyVoted);
         }
 
-        approval.approvals.push_back(approver.clone());
-        put_approval(&env, &approval);
-
         #[allow(deprecated)]
         env.events().publish(
             (Symbol::new(&env, "cb_proposal_approved"), approval_id),
@@ -538,7 +539,10 @@ impl CircuitBreakerContract {
         Ok(())
     }
 
-    /// Execute a proposal once the approval threshold is reached.
+
+// ═══════════════════════════════════════════════════════════════════════
+// MULTI-AUTHORITY PAUSE  (proposal → approvals → execute)
+// ═══════════════════════════════════════════════════════════════════════
     ///
     /// Any guardian can trigger execution once enough votes are in.
     /// `pause_duration_secs` is the duration for the resulting pause.
@@ -614,6 +618,7 @@ impl CircuitBreakerContract {
         state.expires_at = 0;
         set_state(&env, &state);
 
+        #[allow(deprecated)]
         env.events()
             .publish((Symbol::new(&env, "cb_lifted"), record_id), caller);
 
@@ -629,7 +634,7 @@ impl CircuitBreakerContract {
     /// If the pause has expired this call auto-expires it and returns the
     /// updated (unpaused) state.
     pub fn get_state(env: Env) -> CircuitBreakerState {
-        let mut state = get_state(&env);
+        let mut state = crate::circuit_breaker::get_state(&env);
         if state.is_paused && is_expired(&env, state.expires_at) {
             // Auto-expire
             if let Some(mut record) = get_record(&env, state.current_record_id) {
@@ -651,14 +656,14 @@ impl CircuitBreakerContract {
 
     /// Returns `true` when the contract is paused at any level above Advisory.
     pub fn is_paused(env: Env) -> bool {
-        let state = CircuitBreakerContract::get_state(env);
+        let state = get_state(&env);
         state.is_paused
     }
 
     /// Returns `true` when write operations should be blocked
     /// (Partial, Full, or Emergency pause).
     pub fn check_writes_allowed(env: Env) -> bool {
-        let state = CircuitBreakerContract::get_state(env);
+        let state = get_state(&env);
         if !state.is_paused {
             return true;
         }
@@ -667,7 +672,7 @@ impl CircuitBreakerContract {
 
     /// Returns `true` when all mutations are blocked (Full or Emergency).
     pub fn check_mutations_allowed(env: Env) -> bool {
-        let state = CircuitBreakerContract::get_state(env);
+        let state = get_state(&env);
         if !state.is_paused {
             return true;
         }
@@ -676,7 +681,7 @@ impl CircuitBreakerContract {
 
     /// Returns `true` when reads are allowed (everything except Emergency).
     pub fn check_reads_allowed(env: Env) -> bool {
-        let state = CircuitBreakerContract::get_state(env);
+        let state = get_state(&env);
         if !state.is_paused {
             return true;
         }
